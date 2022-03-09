@@ -1,0 +1,36 @@
+<div class="text-center mt-3">
+  <h1>
+    新規ユーザー登録
+  </h1>
+  <%= form_with model: @user, class: 'w-50 mx-auto', local: true do | form | %>
+      <% if @user.errors.any? %>
+        <div>
+          <ul>
+            <% @user.errors.full_messages.each do |message| %>
+              <li>
+                <%= message %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    <div class="mb-3">
+        <%= form.label '名前', class: 'form-label' %><br>
+        <%= form.text_field :name , class: 'form-control' %>
+    </div>
+    <div class="mb-3">
+        <%= form.label 'メールアドレス', class: 'form-label' %>
+        <%= form.email_field :email , class: 'form-control' %>
+    </div>
+    <div class="mb-3">
+      <%= form.label 'パスワード', class: 'form-label' %><br>
+      <%= form.password_field :password , class: 'form-control' %>
+    </div>
+    <div class="mb-3">
+      <%= form.label 'パスワード再入力', class: 'form-label' %>
+      <%= form.password_field :password_confirmation, class: 'form-control' %>
+    </div>
+    <%= form.submit 'ユーザー登録', class: 'btn btn-primary mb-3' %>
+  <% end %>
+  <%= link_to 'ログインページへ', login_path %>
+</div>
