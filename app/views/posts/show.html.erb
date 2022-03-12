@@ -1,0 +1,35 @@
+<div class="text-center mt-3">
+  <h1>
+    投稿詳細
+  </h1>
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col">
+        <div class="card mb-4" style="width: 100%;">
+          <div class="card-body">
+            <p class="card-text">
+              <%= @post.content %>
+            </p>
+            <div>
+              <span>
+                投稿者:
+              </span>
+              <%= link_to @post.user.name, users_show_path(@post.user.uid) %>
+              <span>
+                投稿時間:
+              </span>
+              <span>
+                <%= l @post.created_at %>
+              </span>
+            </div>
+            <div>
+              <%= button_to '削除', posts_destroy_path(@post.id), method: :delete, class: 'btn btn-outline-danger' %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+  </div>
+</div>

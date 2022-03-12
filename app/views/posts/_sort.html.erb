@@ -1,0 +1,10 @@
+<%= form_with url: posts_path, class: 'mb-3', method: 'GET' do | form | %>
+  <div class="row">
+    <div class="col-10">
+      <%= form.select :sort, {'新着順': 'new_post', '古い順': 'old_post', "コメントが多い順": 'many_comment', 'いいねが多い順': 'many_like'}, {selected: @sort_selected}, :class => 'form-select' %>
+    </div>
+    <div class="col-2">
+      <%= form.submit 'ソート', name: nil, class: 'btn btn-primary'%>
+    </div>
+  </div>
+<% end %>

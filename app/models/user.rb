@@ -1,28 +1,25 @@
 class User < ApplicationRecord
   has_secure_password
 
+  has_many :posts
+
   validates :name, presence: true
   validates :email, presence: true, format: {with: URI::MailTo::EMAIL_REGEXP}, uniqueness: true
   validates :password, presence: true, confirmation: true, length: {minimum: 4}
 
-  before_save :add_uid
-
-  def add_uid
-    self.uid = uid_numbering
-  end
+  before_create :add_uid
 
   private
-  def uid_numbering
-    max_digit = 8
-    max_number = 9
-    uid_number = ''
+  def add_uid
+    uid = ''
     loop do
-      uid_number = max_digit.times.map { rand(max_number) }.join
-      result = User.find_by(uid: uid_number)
+      uid = id_numbering
+      result = User.find_by(uid: uid)
       if result.nil?
         break
       end
     end
-    uid_number
+    self.uid = uid
   end
+
 end

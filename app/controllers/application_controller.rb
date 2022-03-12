@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   def already_login?
     unless current_user.nil?
-      redirect_to root_path
+      redirect_to posts_path
     end
   end
 

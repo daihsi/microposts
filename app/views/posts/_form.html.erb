@@ -1,0 +1,22 @@
+<%= form_with url: posts_create_path do | form | %>
+  <% if @post %>
+    <% if @post.errors.any? %>
+      <div>
+        <ul>
+          <% @post.errors.full_messages.each do |message| %>
+            <li>
+              <%= message %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  <% end %>
+  <div>
+    <%= form.label '新規投稿', class: 'form-label' %>
+    <%= form.text_area :content, class: 'form-control', maxlength: 300 %>
+  </div>
+  <div>
+    <%= form.submit '送信', name: nil, class: 'btn btn-primary mt-2' %>
+  </div>
+<% end %>

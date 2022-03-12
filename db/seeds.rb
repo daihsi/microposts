@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+20.times do |index|
+  uid = 8.times.map { rand(9) }.join
+  User.create!(uid: uid, name: "test#{index}", email: "test#{index}@test.com", password: '1111', password_confirmation: '1111')
+end

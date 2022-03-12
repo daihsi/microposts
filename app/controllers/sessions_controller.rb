@@ -7,7 +7,8 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
       session[:uid] = user.uid
-      redirect_to controller: :users, action: :show, uid: session[:uid]
+      session[:id] = user.id
+      redirect_to posts_path
     else
       render :new
     end
@@ -15,6 +16,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:uid] = nil
+    session[:id] = nil
     redirect_to root_path
   end
 end

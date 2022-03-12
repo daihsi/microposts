@@ -1,0 +1,24 @@
+<% @posts.each do |post| %>
+  <div class="card mb-4" style="width: 100%;">
+    <div class="card-body">
+      <p class="card-text">
+        <%= post.content %>
+      </p>
+      <div>
+        <span>
+          投稿者:
+        </span>
+        <%= link_to post.user.name, users_show_path(post.user.uid) %>
+        <span>
+          投稿時間:
+        </span>
+        <span>
+          <%= l post.created_at %>
+        </span>
+      </div>
+      <div>
+        <%= link_to '詳しく見る', posts_show_path(post.pid) %>
+      </div>
+    </div>
+  </div>
+<% end %>

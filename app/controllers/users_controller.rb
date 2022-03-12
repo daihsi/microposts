@@ -10,7 +10,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:uid] = @user.uid
-      redirect_to action: 'show', uid: session[:uid]
+      session[:id] = @user.id
+      redirect_to posts_path
     else
       render 'new', status: :unprocessable_entity
     end
