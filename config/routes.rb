@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get '/posts/:pid', to: 'posts#show', as: 'posts_show'
   post '/posts', to: 'posts#create', as: 'posts_create'
   delete '/posts/:id', to: 'posts#destroy', as: 'posts_destroy'
+  post '/posts/:pid/comments', to: 'comments#create', as: 'comments_create'
+  delete '/comments/:id', to: 'comments#destroy', as: 'comments_destroy'
 end

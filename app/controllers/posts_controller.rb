@@ -20,6 +20,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by(pid: params[:pid])
+    @comments = @post.comments.include_user.id_desc
   end
 
   def destroy

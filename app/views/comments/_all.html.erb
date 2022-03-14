@@ -1,0 +1,25 @@
+<div class="mt-4">
+  <p>
+    コメント一覧
+  </p>
+  <ul class="list-group list-group-flush">
+    <% @comments.each do |comment| %>
+      <li class="list-group-item">
+        <div class="text-start">
+          <p>
+            <%= comment.content %>
+          </p>
+        </div>
+        <div class="text-end">
+          <span>
+            <%= comment.user.name%>
+          </span>
+          <span>
+            <%= l comment.created_at %>
+          </span>
+          <%= button_to '削除', comments_destroy_path(comment.id), method: :delete, class: 'btn btn-outline-danger btn-sm' %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

@@ -15,6 +15,10 @@
         <span>
           <%= l post.created_at %>
         </span>
+        <span class="p-3">
+          <i class="fa-solid fa-comments"></i>
+          <%= post.comments.size%>
+        </span>
       </div>
       <div>
         <%= link_to '詳しく見る', posts_show_path(post.pid) %>

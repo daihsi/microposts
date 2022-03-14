@@ -22,13 +22,15 @@
                 <%= l @post.created_at %>
               </span>
             </div>
-            <div>
-              <%= button_to '削除', posts_destroy_path(@post.id), method: :delete, class: 'btn btn-outline-danger' %>
+            <div class="text-end">
+              <%= button_to '削除', posts_destroy_path(@post.id), method: :delete, class: 'btn btn-outline-danger btn-sm' %>
             </div>
           </div>
         </div>
       </div>
       <div class="col">
+        <%= render partial: 'comments/form' %>
+        <%= render partial: 'comments/all' %>
       </div>
     </div>
   </div>
