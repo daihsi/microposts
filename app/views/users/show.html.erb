@@ -22,4 +22,6 @@
       </tr>
     </tbody>
   </table>
+  <%= follow_or_unfollow_button(target_user: @user) %>
+  <%= render partial: 'relationships/tabs', locals: {follows: @follows, follower: @follower} %>
 </div>

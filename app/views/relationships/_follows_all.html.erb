@@ -1,0 +1,7 @@
+<div class="row">
+  <% follows.each do |user| %>
+    <div class="col-4 mt-4">
+      <%= link_to user.name, users_show_path(user.uid)%>
+    </div>
+  <% end %>
+</div>

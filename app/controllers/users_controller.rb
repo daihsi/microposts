@@ -19,6 +19,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(uid: params[:uid])
+    @follows = @user.following_user.id_desc
+    @follower = @user.follower_user.id_desc
   end
 
   private
