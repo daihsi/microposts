@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="daa4f728-b96e-41f5-89fb-6a2ec9431b4e" name="変更" comment="">
+      <change afterPath="$PROJECT_DIR$/app/graphql/loaders/association_loader.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/graphql/loaders/record_loader.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/graphql/resolvers/post_resolver.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/graphql/resolvers/posts_resolver.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/graphql/microposts_schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphql/microposts_schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/graphql/types/query_type.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphql/types/query_type.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/graphql/types/user_type.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphql/types/user_type.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +194,7 @@
       <workItem from="1647774817200" duration="158000" />
       <workItem from="1647775001382" duration="7853000" />
       <workItem from="1647955104629" duration="11247000" />
-      <workItem from="1648040190258" duration="333000" />
+      <workItem from="1648040190258" duration="9083000" />
     </task>
     <servers />
   </component>
@@ -204,6 +209,36 @@
             <State />
           </value>
         </entry>
+        <entry key="c9041eab-097d-4776-b628-51a8d99f0997">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="c9041eab-097d-4776-b628-51a8d99f0997" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>
