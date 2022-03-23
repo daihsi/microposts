@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  protect_from_forgery with: :null_session
   def login?
     if current_user.nil?
       redirect_to login_path
