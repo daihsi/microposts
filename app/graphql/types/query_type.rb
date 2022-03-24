@@ -10,5 +10,8 @@ module Types
     field :user, resolver: Resolvers::UserResolver
     field :posts, resolver: Resolvers::PostsResolver
     field :post, resolver: Resolvers::PostResolver
+    field :posts_sord, resolver: Resolvers::PostsSortResolver
+    field :comment, resolver: Resolvers::CommentResolver
+    field :comments, resolver: Resolvers::CommentsResolver
   end
 end

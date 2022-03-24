@@ -27,6 +27,18 @@ class Post < ApplicationRecord
     end
   end
 
+  def create_post(**args)
+    Post.create(user_id: args[:user_id], content: args[:content])
+  end
+
+  def update_post(**args)
+    Post.update(args[:id], content: args[:content])
+  end
+
+  def delete_post(id:)
+    Post.destroy(id)
+  end
+
   private
   def add_pid
     pid = ''
