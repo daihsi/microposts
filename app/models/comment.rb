@@ -10,6 +10,14 @@ class Comment < ApplicationRecord
   scope :group_post_id, -> {group(:post_id)}
   scope :array_post_id, -> {pluck(:post_id)}
 
+  def create_comment(**args)
+    Comment.create(user_id: args[:user_id], post_id: args[:post_id], content: args[:content])
+  end
+
+  def delete_comment(id:)
+    Comment.destroy(id)
+  end
+
   def set_user_id(login_user_id:)
     self.user_id = login_user_id
   end

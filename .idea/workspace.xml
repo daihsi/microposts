@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="daa4f728-b96e-41f5-89fb-6a2ec9431b4e" name="変更" comment="">
-      <change afterPath="$PROJECT_DIR$/app/graphql/loaders/association_loader.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/graphql/loaders/record_loader.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/graphql/resolvers/post_resolver.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/graphql/resolvers/posts_resolver.rb" afterDir="false" />
+    <list default="true" id="daa4f728-b96e-41f5-89fb-6a2ec9431b4e" name="変更" comment="GraphQL PostのQureyとMutation追加">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/graphql/microposts_schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphql/microposts_schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/graphql/types/query_type.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphql/types/query_type.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/graphql/types/mutation_type.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphql/types/mutation_type.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/graphql/types/user_type.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphql/types/user_type.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/comment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/comment.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +42,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -65,7 +61,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Rails.Development: microposts">
+  <component name="RunManager" selected="Ruby.post">
     <configuration name="Development: microposts" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="microposts" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
@@ -155,6 +151,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="post" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$PROJECT_DIR$/app/models" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$PROJECT_DIR$/app/models/post.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest">
       <predefined_log_file enabled="true" id="RUBY_TESTUNIT" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
@@ -179,6 +190,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Ruby.post" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="アプリケーションレベル" UseSingleDictionary="true" transferred="true" />
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
@@ -194,8 +210,17 @@
       <workItem from="1647774817200" duration="158000" />
       <workItem from="1647775001382" duration="7853000" />
       <workItem from="1647955104629" duration="11247000" />
-      <workItem from="1648040190258" duration="9083000" />
+      <workItem from="1648040190258" duration="9695000" />
+      <workItem from="1648077353957" duration="19780000" />
     </task>
+    <task id="LOCAL-00001" summary="GraphQL PostのQureyとMutation追加">
+      <created>1648159652250</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1648159652250</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,5 +266,9 @@
         <entry key="c9041eab-097d-4776-b628-51a8d99f0997" value="TOOL_WINDOW" />
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="GraphQL PostのQureyとMutation追加" />
+    <option name="LAST_COMMIT_MESSAGE" value="GraphQL PostのQureyとMutation追加" />
   </component>
 </project>
