@@ -1,5 +1,7 @@
 module Types
   class MutationType < Types::BaseObject
+    field :unfollowing, mutation: Mutations::Unfollowing
+    field :following, mutation: Mutations::Following
     field :delete_comment, mutation: Mutations::DeleteComment
     field :create_comment, mutation: Mutations::CreateComment
     field :delete_post, mutation: Mutations::DeletePost

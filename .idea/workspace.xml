@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="daa4f728-b96e-41f5-89fb-6a2ec9431b4e" name="変更" comment="GraphQL PostのQureyとMutation追加">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/391408e3-8906-4c52-a9fa-c8447c29f297.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/49beb0d3-e472-4abf-847c-c440b1b2b2cb.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/92efa519-2255-4cca-b9b4-c7e7df57b61b.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/graphql/types/mutation_type.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphql/types/mutation_type.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/graphql/types/user_type.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphql/types/user_type.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/comment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/comment.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +27,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -211,7 +216,8 @@
       <workItem from="1647775001382" duration="7853000" />
       <workItem from="1647955104629" duration="11247000" />
       <workItem from="1648040190258" duration="9695000" />
-      <workItem from="1648077353957" duration="19780000" />
+      <workItem from="1648077353957" duration="22548000" />
+      <workItem from="1648195257443" duration="8789000" />
     </task>
     <task id="LOCAL-00001" summary="GraphQL PostのQureyとMutation追加">
       <created>1648159652250</created>
