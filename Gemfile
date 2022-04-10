@@ -74,3 +74,10 @@ end
 gem 'graphql'
 gem 'graphql-batch'
 gem 'graphiql-rails', group: :development
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'ffi'
+end
