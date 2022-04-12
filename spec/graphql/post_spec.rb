@@ -40,8 +40,11 @@ RSpec.describe Post do
     expect(result["data"]["post"]["pid"]).to eq post.pid
   end
 
-  it '新規投稿を作成できているか' do
-    query_string = <<-GRAPHQL
+  describe '投稿CRUDテスト' do
+    let(:post) { create(:post, user_id: user.id) }
+
+    it '新規投稿を作成できているか' do
+      query_string = <<-GRAPHQL
       mutation CreatePost($input: CreatePostInput!) {
         createPost(input: $input) {
           post {
@@ -52,14 +55,60 @@ RSpec.describe Post do
           }
         }
       }
-    GRAPHQL
-    variables = {
-      "input": {
-        "userId": user.id,
-        "content": Faker::String.random(length: 300)
+      GRAPHQL
+      variables = {
+        "input": {
+          "userId": user.id,
+          "content": Faker::String.random(length: 300)
+        }
       }
-    }
-    result = MicropostsSchema.execute(query_string, context: {}, variables: variables)
-    expect(result["data"]["createPost"]["post"].blank?).to eq false
+      result = MicropostsSchema.execute(query_string, context: {}, variables: variables)
+      expect(result["data"]["createPost"]["post"].blank?).to eq false
+    end
+
+    it '投稿を更新できているか' do
+      query_string = <<-GRAPHQL
+      mutation UpdatePost($input: UpdatePostInput!) {
+        updatePost(input: $input) {
+          post {
+            id
+            pid
+            content
+            userId
+          }
+        }
+      }
+      GRAPHQL
+      variables = {
+        "input": {
+          "id": post.id,
+          "content": Faker::String.random(length: 300)
+        }
+      }
+      result = MicropostsSchema.execute(query_string, context: {}, variables: variables)
+      expect(result["data"]["updatePost"]["post"]["content"]).to eq variables[:input][:content]
+    end
+
+    it '投稿を削除できているか' do
+      query_string = <<-GRAPHQL
+      mutation DeletePost($input: DeletePostInput!) {
+        deletePost(input: $input) {
+          post {
+            id
+            pid
+            content
+            userId
+          }
+        }
+      }
+      GRAPHQL
+      variables = {
+        "input": {
+          "id": post.id,
+        }
+      }
+      MicropostsSchema.execute(query_string, context: {}, variables: variables)
+      expect(Post.where(id: post.id).count).to eq 0
+    end
   end
 end
