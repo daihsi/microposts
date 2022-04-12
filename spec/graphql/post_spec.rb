@@ -108,7 +108,7 @@ RSpec.describe Post do
         }
       }
       MicropostsSchema.execute(query_string, context: {}, variables: variables)
-      expect(Post.where(id: post.id).count).to eq 0
+      expect(Post.find_by(id: post.id).nil?).to eq true
     end
   end
 end

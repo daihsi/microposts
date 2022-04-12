@@ -1,6 +1,7 @@
 FactoryBot.define do
-  factory :post do
+  factory :comment do
     content { Faker::String.random(length: 300) }
-    association :user
+    association :post
+    user { post.user }
   end
 end

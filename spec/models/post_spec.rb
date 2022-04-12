@@ -12,7 +12,8 @@ RSpec.describe Post, type: :model do
     end
 
     it 'contentの桁数がオーバー' do
-      fake_content = Faker::String.random(length: 301)
+      MAX_CONTENT_LENGTH = 300
+      fake_content = Faker::String.random(length: (MAX_CONTENT_LENGTH + 1))
       post = build(:post, { content: "#{fake_content}", user_id: user.id })
       post.valid?
       expect(post.errors[:content].first).to include("content.too_long")
