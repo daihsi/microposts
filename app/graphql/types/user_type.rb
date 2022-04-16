@@ -10,6 +10,7 @@ module Types
     field :comments_loader, [Types::CommentType]
     field :follower_loader, [Types::RelationshipType]
     field :followed_loader, [Types::RelationshipType]
+    field :like_posts_loader, [Types::LikeType]
 
     def posts_loader
       Loaders::AssociationLoader.for(User, :posts).load(object)
@@ -25,6 +26,10 @@ module Types
 
     def followed_loader
       Loaders::AssociationLoader.for(User, :follower).load(object)
+    end
+
+    def like_posts_loader
+      Loaders::AssociationLoader.for(User, :likes).load(object)
     end
   end
 end
