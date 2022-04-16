@@ -16,9 +16,9 @@ module Mutations
 
     def resolve(**args)
       user = User.find(args[:follower_id])
-      user.unfollow(user_id: args[:followed_id])
+      unfollow = user.unfollow(user_id: args[:followed_id])
       {
-        user: user
+        unfollow: unfollow
       }
     end
   end
