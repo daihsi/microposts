@@ -30,6 +30,18 @@ class User < ApplicationRecord
     following_user.include?(user)
   end
 
+  def like_post(post_id:)
+    likes.create(post_id)
+  end
+
+  def unlike_post(post_id:)
+    likes.find_by(post_id: post_id).destroy
+  end
+
+  def like_post?(post:)
+    like_posts.include?(post)
+  end
+
   private
   def add_uid
     uid = ''

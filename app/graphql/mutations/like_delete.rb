@@ -4,15 +4,17 @@ module Mutations
   class LikeDelete < BaseMutation
     description "Deletes a like by ID"
 
-    field :like, Types::LikeType, null: false
+    field :unlike, Types::UserType, null: false
 
-    argument :id, ID, required: true
+    argument :user_id, Integer, required: true
+    argument :post_id, Integer, required: true
 
-    def resolve(id:)
-      like = ::Like.find(id)
-      raise GraphQL::ExecutionError.new "Error deleting like", extensions: like.errors.to_hash unless like.destroy
-
-      { like: like }
+    def resolve(**args)
+      user = User.find_by(id: args[:user_id])
+      user.unlike_post(post_id: args[:post_id])
+      {
+        unlike: user
+      }
     end
   end
 end
