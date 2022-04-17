@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="daa4f728-b96e-41f5-89fb-6a2ec9431b4e" name="変更" comment="add Likeテスト実施">
+    <list default="true" id="daa4f728-b96e-41f5-89fb-6a2ec9431b4e" name="変更" comment="add GraqhQL Like追加">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/graphql/types/like_type.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphql/types/like_type.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/graphql/types/mutation_type.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphql/types/mutation_type.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/graphql/types/post_type.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphql/types/post_type.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/graphql/types/user_type.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphql/types/user_type.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -674,7 +673,7 @@
       <workItem from="1649628149736" duration="32509000" />
       <workItem from="1650061222086" duration="9886000" />
       <workItem from="1650078961331" duration="4258000" />
-      <workItem from="1650108899025" duration="6277000" />
+      <workItem from="1650108899025" duration="9680000" />
     </task>
     <task id="LOCAL-00001" summary="GraphQL PostのQureyとMutation追加">
       <created>1648159652250</created>
@@ -753,7 +752,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650114901913</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add GraqhQL Like追加">
+      <created>1650117354135</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1650117354135</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -811,7 +817,8 @@
     <MESSAGE value="add Relationshipテスト追加" />
     <MESSAGE value="add Likeモデル追加" />
     <MESSAGE value="add Likeテスト実施" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Likeテスト実施" />
+    <MESSAGE value="add GraqhQL Like追加" />
+    <option name="LAST_COMMIT_MESSAGE" value="add GraqhQL Like追加" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/microposts@Comment_comment.rcov" NAME="Comment comment のカバレッジ結果" MODIFIED="1649801745688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="microposts" />
