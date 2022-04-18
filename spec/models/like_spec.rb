@@ -32,4 +32,30 @@ RSpec.describe Like, type: :model do
       expect(Like.find_by(id: like.id).nil?).to eq true
     end
   end
+  describe 'メソッドの検証' do
+    let(:user) { create(:user) }
+    let(:post) { create(:post) }
+
+    it 'like_post メソッド検証' do
+      like = user.like_post(post_id: post.id)
+      expect(Like.find_by(id: like.id).nil?).to eq false
+    end
+
+    it 'unlike_post メソッド検証' do
+      like = user.like_post(post_id: post.id)
+      user.unlike_post(post_id: post.id)
+      expect(Like.find_by(id: like.id).nil?).to eq true
+    end
+
+    context 'like_post? メソッド検証' do
+      it 'trueの場合' do
+        user.like_post(post_id: post.id)
+        expect(user.like_post?(post: post)).to eq true
+      end
+
+      it 'falseの場合' do
+        expect(user.like_post?(post: post)).to eq false
+      end
+    end
+  end
 end

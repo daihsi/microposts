@@ -31,7 +31,7 @@ class User < ApplicationRecord
   end
 
   def like_post(post_id:)
-    likes.create(post_id)
+    likes.create(post_id: post_id)
   end
 
   def unlike_post(post_id:)
